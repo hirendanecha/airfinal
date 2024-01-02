@@ -1,6 +1,6 @@
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import React from "react";
-import CoverImage from "../../../public/Images/HeroSection/fullMobile.png";
+import CoverImage from "../../../public/Images/HeroSection/FullMobile.png";
 import CoverImage2 from "../../../public/Images/HeroSection/Mockup.png";
 import QrCode from "../../../public/Images/HeroSection/qrcode.svg";
 import Image from "next/image";

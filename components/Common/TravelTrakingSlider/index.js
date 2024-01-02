@@ -1,4 +1,4 @@
-import WeGoing from "../../../public/Images/TravelTraking/pic.svg";
+import WeGoing from "../../../public/Images/TravelTraking/Pic.svg";
 import Baggage from "../../../public/Images/TravelTraking/1.svg";
 import Destination from "../../../public/Images/TravelTraking/2.svg";
 import CarRent from "../../../public/Images/TravelTraking/3.svg";
