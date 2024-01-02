@@ -101,7 +101,12 @@ function Footer() {
                       },
                     }}
                   >
-                    <Image src={social.icon} width={24} height={24} />
+                    <Image
+                      src={social.icon}
+                      width={24}
+                      height={24}
+                      alt="icon"
+                    />
                   </Link>
                 );
               })}
@@ -323,7 +328,12 @@ function Footer() {
                     },
                   }}
                 >
-                  <Image src={social.icon} width={24} height={24} />
+                  <Image
+                    src={social.icon}
+                    width={24}
+                    height={24}
+                    alt="social"
+                  />
                 </Link>
               );
             })}

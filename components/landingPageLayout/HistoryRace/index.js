@@ -103,7 +103,7 @@ export default function HistoryRace() {
             We started an amazing race in the air that tracks flight history,
             major flying stats and ranks its fliers. Win badges and achievements
             for flying adventures and compare stats with your friends and your
-            social following – There's nothing like it!
+            social following There&#39;s nothing like it
           </Typography>
         </Box>
 

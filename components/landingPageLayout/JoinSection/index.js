@@ -105,7 +105,7 @@ export default function JoinSection() {
                 {" "}
                 {data.map((ele, i) => {
                   return (
-                    <Grid item md={3.5} xs={i === 2 ? 12 : 6}>
+                    <Grid key={i} item md={3.5} xs={i === 2 ? 12 : 6}>
                       <Box
                         sx={{
                           backgroundColor: "#FFF",

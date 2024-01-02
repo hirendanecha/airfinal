@@ -206,7 +206,7 @@ export default function WhenYouFly() {
               {logos?.map((Logo, i) => {
                 return (
                   <Box key={i}>
-                    <Image src={Logo} width={100} height={100} />
+                    <Image src={Logo} width={100} height={100} alt="logo"/>
                   </Box>
                 );
               })}

@@ -153,7 +153,7 @@ function TrakedSupport() {
           <Grid spacing={5}>
             {reviews.map((review, i) => {
               return (
-                <SwiperSlide>
+                <SwiperSlide key={i}>
                   <Grid item xs={12} md={4}>
                     <Card
                       sx={{

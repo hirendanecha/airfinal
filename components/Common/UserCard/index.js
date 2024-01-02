@@ -48,7 +48,7 @@ export default function UserCard({
             value={30}
             sx={{ marginTop: "-20%" }}
           >
-            <Image src={user} height={89} width={89} />
+            <Image src={user} height={89} width={89} alt="user"/>
           </CircularProgress>
           <CardContent>
             <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>

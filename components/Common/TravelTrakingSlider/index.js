@@ -173,9 +173,10 @@ export default function TravelTrakingSlider() {
         }}
         modules={[Pagination]}
       >
-        {data.map((ele) => {
+        {data.map((ele, i) => {
           return (
             <SwiperSlide
+              key={i}
               style={{
                 backgroundColor: "#333333",
                 borderRadius: "15px",
@@ -199,9 +200,10 @@ export default function TravelTrakingSlider() {
                       paddingLeft: { md: "50px", xs: 0 },
                     }}
                   >
-                    {ele.data.map((info) => {
+                    {ele.data.map((info, i) => {
                       return (
                         <Box
+                          key={i}
                           sx={{
                             display: "flex",
                             flexDirection: "column",
@@ -259,7 +261,7 @@ export default function TravelTrakingSlider() {
                       );
                     })}
                   </Grid>
-                  <Grid item xs={12} md={6} >
+                  <Grid item xs={12} md={6}>
                     <Img sx={{ width: "100%" }} src={ele.img} />
                   </Grid>
                 </Grid>

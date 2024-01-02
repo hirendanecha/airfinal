@@ -69,6 +69,7 @@ export default function MobileMap() {
       {data.map((ele, i) => {
         return (
           <Grid
+            key={i}
             container
             rowSpacing={1}
             columnSpacing={{ xs: 1, sm: 2, md: 3 }}
@@ -129,7 +130,12 @@ export default function MobileMap() {
                 {ele.desctiption}
               </Typography>
             </Grid>
-            <Grid item xs={12} md={6} sx={{ display: "flex", justifyContent: "center" }}>
+            <Grid
+              item
+              xs={12}
+              md={6}
+              sx={{ display: "flex", justifyContent: "center" }}
+            >
               <Img
                 src={ele.image}
                 alt="mobile1"

@@ -10,7 +10,7 @@ export default function useWindowDimensions() {
       clearTimeout(timeoutId);
       timeoutId = setTimeout(() => {
         setWindowDimensions({ width: window.innerWidth, height: window.innerHeight });
-      }, 500);
+      }, 100);
     }
 
     window.addEventListener("resize", handleResize);

@@ -1,4 +1,12 @@
-import { Box, Container, Grid, Paper, Typography, styled, useMediaQuery } from "@mui/material";
+import {
+  Box,
+  Container,
+  Grid,
+  Paper,
+  Typography,
+  styled,
+  useMediaQuery,
+} from "@mui/material";
 
 import MobileMap from "../../Common/MobileMap";
 import useWindowDimensions from "../../Common/dimensions";
@@ -9,7 +17,13 @@ export default function SaveTime() {
 
   console.log(width);
   return (
-    <Box sx={{ backgroundColor: "#F5F5F5", position: "relative", pb: { xs: 16, sm: 25 } }}>
+    <Box
+      sx={{
+        backgroundColor: "#F5F5F5",
+        position: "relative",
+        pb: { xs: 16, sm: 25 },
+      }}
+    >
       {/* <Box
         sx={{
           position: "absolute",
@@ -31,7 +45,9 @@ export default function SaveTime() {
           top: 170,
           bottom: 0,
           left: "50%",
-          transform: `translateX(-50%) scaleX(${(width + 50) / 1824.572564612325})`,
+          transform: `translateX(-50%) scaleX(${
+            (width + 50) / 1824.572564612325
+          })`,
           // height: "3062px",
           height: "100%",
           display: { xs: "none", sm: "block" },
@@ -292,17 +308,58 @@ export default function SaveTime() {
           display: { xs: "block", sm: "none" },
         }}
       >
-        <svg width="360" height="2264" viewBox="0 0 360 2264" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg
+          width="360"
+          height="2264"
+          viewBox="0 0 360 2264"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <path
             d="M0 4V4C9.1127 4 16.5 11.3873 16.5 20.5V462.044C16.5 479.677 30.7639 493.987 48.3965 494.044L312.103 494.897C329.736 494.954 344 509.264 344 526.897V876.847C344 894.58 329.58 908.931 311.848 908.847L48.614 907.594C30.8965 907.51 16.4829 921.838 16.4618 939.556L16.038 1295.56C16.017 1313.18 30.2573 1327.51 47.8856 1327.59L311.688 1328.85C329.288 1328.93 343.516 1343.21 343.536 1360.81L343.963 1736.81C343.984 1754.56 329.558 1768.93 311.811 1768.85L48.6523 1767.59C30.9199 1767.51 16.5 1781.86 16.5 1799.59V2227.94C16.5 2245.61 30.8269 2259.94 48.5 2259.94H382"
             stroke="white"
             stroke-width="8"
           />
-          <circle cx="16" cy="234" r="8" fill="#F5F5F5" stroke="white" stroke-width="8" />
-          <circle cx="16" cy="1131" r="8" fill="#F5F5F5" stroke="white" stroke-width="8" />
-          <circle cx="16" cy="1978" r="8" fill="#F5F5F5" stroke="white" stroke-width="8" />
-          <circle cx="344" cy="690" r="8" fill="#F5F5F5" stroke="white" stroke-width="8" />
-          <circle cx="344" cy="1544" r="8" fill="#F5F5F5" stroke="white" stroke-width="8" />
+          <circle
+            cx="16"
+            cy="234"
+            r="8"
+            fill="#F5F5F5"
+            stroke="white"
+            stroke-width="8"
+          />
+          <circle
+            cx="16"
+            cy="1131"
+            r="8"
+            fill="#F5F5F5"
+            stroke="white"
+            stroke-width="8"
+          />
+          <circle
+            cx="16"
+            cy="1978"
+            r="8"
+            fill="#F5F5F5"
+            stroke="white"
+            stroke-width="8"
+          />
+          <circle
+            cx="344"
+            cy="690"
+            r="8"
+            fill="#F5F5F5"
+            stroke="white"
+            stroke-width="8"
+          />
+          <circle
+            cx="344"
+            cy="1544"
+            r="8"
+            fill="#F5F5F5"
+            stroke="white"
+            stroke-width="8"
+          />
         </svg>
       </Box>
       <Container maxWidth="xl" sx={{ position: "relative" }}>
