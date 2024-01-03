@@ -65,7 +65,12 @@ export default function MobileMap() {
     },
   ];
   return (
-    <Box display={"flex"} flexDirection={"column"} gap={{ xs: 1, md: 20 }}>
+    <Box
+      display={"flex"}
+      flexDirection={"column"}
+      gap={{ xs: 5.5, md: 20 }}
+      pb={2}
+    >
       {data.map((ele, i) => {
         return (
           <Grid
