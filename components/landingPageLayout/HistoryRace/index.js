@@ -1,10 +1,7 @@
 import { Box, Container, Divider, Grid, Typography } from "@mui/material";
 import React from "react";
 import StoreButton from "../../StoreButton";
-import ReviewSlider from "../../Common/MobileMap/ReviewSlider";
 import UserCard from "../../Common/UserCard";
-import User1 from "../../../public/Images/user1.svg";
-import User2 from "../../../public/Images/user2.svg";
 export default function HistoryRace() {
   const svg1 = (
     <svg
@@ -60,7 +57,7 @@ export default function HistoryRace() {
               lineHeight: { md: "52px", xs: "40px" },
               color: "#8F8F8F",
               textAlign: "center",
-              mt: 4,
+              mt: { md: 10, xs: 4 },
             }}
           >
             Track Your Flight Stats
@@ -137,7 +134,13 @@ export default function HistoryRace() {
           <Grid item xs={0} lg={1} md={1}></Grid>
         </Grid>
         {/* {"map section"} */}
-        <Box sx={{ display: "flex", justifyContent: "center", mt: 10 }}>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            mt: { md: 10, xs: 1 },
+          }}
+        >
           <StoreButton />
         </Box>
       </Container>

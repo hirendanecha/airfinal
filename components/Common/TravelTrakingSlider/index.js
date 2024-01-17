@@ -1,8 +1,8 @@
-import WeGoing from "../../../public/Images/TravelTraking/Pic.svg";
-import Baggage from "../../../public/Images/TravelTraking/1.svg";
-import Destination from "../../../public/Images/TravelTraking/2.svg";
-import CarRent from "../../../public/Images/TravelTraking/3.svg";
-import Location from "../../../public/Images/TravelTraking/4.svg";
+import WeGoing from "../../../public/Images/TravelTraking/Pic (1).svg";
+import Baggage from "../../../public/Images/TravelTraking/Pic (2).svg";
+import Destination from "../../../public/Images/TravelTraking/Pic (3).svg";
+import CarRent from "../../../public/Images/TravelTraking/Pic (4).svg";
+import Location from "../../../public/Images/TravelTraking/Pic (5).svg";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -11,9 +11,13 @@ import { Pagination } from "swiper/modules";
 import * as ReactDOMServer from "react-dom/server";
 
 const Img = styled(Image)(({ theme }) => ({
-  width: "auto !important",
-  height: "529px",
+  width: "729px !important",
+  height: "529px ",
   maxWidth: "100%",
+  [theme.breakpoints.down("md")]: {
+    width: "auto !important",
+    height: "300px",
+  },
   [theme.breakpoints.down("sm")]: {
     width: "auto !important",
     height: "180px",
@@ -84,6 +88,7 @@ const data = [
 
 import React from "react";
 import { Box, Grid, Typography, styled } from "@mui/material";
+import { Autoplay, Navigation } from "swiper/modules";
 
 export default function TravelTrakingSlider() {
   return (
@@ -103,7 +108,13 @@ export default function TravelTrakingSlider() {
           },
           clickable: true,
         }}
+        // autoplay={{
+        //   delay: 3000,
+        //   disableOnInteraction: false,
+        // }}
         sx={{
+          overflow: "visible !important",
+          overflowX: "clip !important",
           "& .swiper-wrapper": {
             marginBottom: "2rem",
           },
@@ -171,7 +182,7 @@ export default function TravelTrakingSlider() {
             },
           },
         }}
-        modules={[Pagination]}
+        modules={[Autoplay, Pagination, Navigation]}
       >
         {data.map((ele, i) => {
           return (
@@ -180,7 +191,7 @@ export default function TravelTrakingSlider() {
               style={{
                 backgroundColor: "#333333",
                 borderRadius: "15px",
-                // maxHeight: "500px",
+                maxHeight: "450px",
               }}
             >
               <Box>
@@ -207,7 +218,10 @@ export default function TravelTrakingSlider() {
                           sx={{
                             display: "flex",
                             flexDirection: "column",
-                            height: { md: "auto", xs: "200px !important" },
+                            height: {
+                              md: "250px !important",
+                              xs: "200px !important",
+                            },
                           }}
                         >
                           <Typography
@@ -236,6 +250,7 @@ export default function TravelTrakingSlider() {
                                 xs: "16px",
                               },
                               textWrap: "nowrap",
+                              pt: 2,
                             }}
                           >
                             {info.title}
@@ -253,6 +268,7 @@ export default function TravelTrakingSlider() {
                                 xs: "13px",
                               },
                               maxWidth: "500px",
+                              pt: 2,
                             }}
                           >
                             {info.description}
@@ -261,15 +277,15 @@ export default function TravelTrakingSlider() {
                       );
                     })}
                   </Grid>
-                  <Grid item xs={12} md={6}>
-                    <Img sx={{ width: "100%" }} src={ele.img} />
+                  <Grid item xs={12} md={6} mt={-2}>
+                    <Img src={ele.img} />
                   </Grid>
                 </Grid>
               </Box>
             </SwiperSlide>
           );
         })}
-        <div className="swiper-pagination" style={{ marginTop: "100px" }}></div>
+        <div className="swiper-pagination"></div>
       </Box>
     </>
   );

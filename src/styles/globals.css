@@ -12,8 +12,7 @@ body {
 
 body {
   font-family: "SFProDisplay";
-}
-
+} 
 
 @font-face {
   font-family: "SFProDisplay";
@@ -34,4 +33,14 @@ body {
   src: url("../../public/fonts/SFPRODISPLAYTHINITALIC.OTF");
   font-weight: normal;
   font-style: italic;
+}
+
+.swiper-pagination {
+  margin-top: 100px;
+}
+
+@media screen and (max-width: 600px) {
+  .swiper-pagination {
+    margin-top: 40px;
+  }
 }

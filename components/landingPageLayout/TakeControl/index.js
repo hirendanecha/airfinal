@@ -13,15 +13,28 @@ export default function TakeControl() {
           backgroundImage: "url('/Images/HeroSection/flight.png')",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
-          backgroundPosition: "300px -45vh",
+          backgroundPosition: "300px 60%",
+          "@media (max-width: 1920px)": {
+            backgroundPosition: "300px 60%",
+          },
+          "@media (max-width: 1440px)": {
+            backgroundPosition: "500px 70%",
+          },
+          "@media (max-width: 1280px)": {
+            backgroundPosition: "200px 50%",
+          },
+          "@media (max-width: 900px)": {
+            backgroundPosition: "800px 50%",
+          },
         }}
       >
-        <Container maxWidth="xl">
+        <Container sx={{ maxWidth: "1400px !important" }}>
           <Grid
             container
             spacing={8}
             alignItems="center"
             textAlign={{ md: "unset", xs: "center" }}
+            paddingTop={{ xl: "100px", lg: 0 }}
           >
             <Grid item xs={12} md={7}>
               <Box
@@ -44,7 +57,7 @@ export default function TakeControl() {
                   lineHeight: "46px",
                   color: "#FFF",
                   width: { md: "65%", sm: "100%" },
-                  mt: { md: 2, xs: "-5%" },
+                  mt: { md: 4, xs: "-5%" },
                 }}
               >
                 Take control of airport travel & enjoy the trip
@@ -60,8 +73,8 @@ export default function TakeControl() {
                   fontWeight: 500,
                   lineHeight: "22px",
                   color: "#FFF",
-                  width: { md: "60%", sm: "100%" },
-                  mt: 2,
+                  width: { md: "65%", sm: "100%" },
+                  mt: 4,
                 }}
               >
                 Download the go to travel app and save time, stress & money at
@@ -72,6 +85,7 @@ export default function TakeControl() {
                 sx={{
                   justifyContent: { md: "start", xs: "center" },
                   display: "flex",
+                  mt: 2,
                 }}
               >
                 <StoreButton />

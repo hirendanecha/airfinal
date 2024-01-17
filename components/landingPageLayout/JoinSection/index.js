@@ -76,12 +76,12 @@ export default function JoinSection() {
               xs={12}
               md={8.5}
               sx={{
-                backgroundColor: "#D9D9D9",
+                backgroundColor: "#F5F5F5",
                 borderRadius: "20px",
-                minHeight: "438px",
+                minHeight: "450px",
               }}
-              paddingLeft={"16px"}
-              paddingRight={"16px"}
+              paddingLeft={{ md: "35px", xs: "10px" }}
+              paddingRight={{ md: "35px", xs: "10px" }}
             >
               <Box sx={{ mt: 3 }}>
                 <Imge src={Logo} alt="mobile1" width={900} height={900} />
@@ -105,7 +105,7 @@ export default function JoinSection() {
                 {" "}
                 {data.map((ele, i) => {
                   return (
-                    <Grid key={i} item md={3.5} xs={i === 2 ? 12 : 6}>
+                    <Grid key={i} item md={3.8} xs={i === 2 ? 12 : 6}>
                       <Box
                         sx={{
                           backgroundColor: "#FFF",
@@ -164,13 +164,13 @@ export default function JoinSection() {
                 <Typography
                   sx={{
                     fontSize: {
-                      md: "20px",
+                      md: "19px",
                       sm: "16px",
                       xs: "14px",
                     },
                     color: "#000",
                     fontStyle: "normal",
-                    fontWeight: 500,
+                    fontWeight: 600,
                     maxWidth: "450px",
                     mt: { md: 1, sm: 0 },
                   }}
@@ -191,7 +191,7 @@ export default function JoinSection() {
                 backgroundColor: "#242424",
                 borderRadius: "20px",
                 overflow: { md: "unset", xs: "hidden" },
-                height: "438px",
+                height: "450px",
               }}
             >
               <Box>

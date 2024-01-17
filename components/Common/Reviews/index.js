@@ -12,6 +12,7 @@ export default function Reviews() {
           flexDirection: "column",
           alignSelf: "stretch",
           backgroundColor: "#242424",
+          pt: { md: 15, xs: 1 },
         }}
       >
         <Typography

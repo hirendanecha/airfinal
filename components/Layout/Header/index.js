@@ -16,18 +16,17 @@ import Container from "@mui/material/Container";
 import MenuItem from "@mui/material/MenuItem";
 import Divider from "@mui/material/Divider";
 import Link from "@mui/material/Link";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { usePathname } from "next/navigation";
 
-import LogoImg from "../../../public/Images/Logo.png";
+import LogoImg from "../../../public/Images/Logo2.svg";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import CloseIcon from "@mui/icons-material/Close";
 const pages = [
   { label: "For Business", href: "/" },
   { label: "Team", href: "" },
-  { label: "Community", href: "=" },
+  { label: "Community", href: "" },
   { label: "Sustainability", href: "" },
-  { label: "Contact Us", href: "" },
+  { label: "Contact Us", href: "#footer" },
 ];
 
 // const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -41,7 +40,7 @@ function ScrollTrigger({ children }) {
   return cloneElement(children, {
     sx: {
       //   py: { xs: 1.5, sm: 2 },
-      backgroundColor: "#242424",
+      backgroundColor: trigger ? "transparent" : "transparent",
       color: "#1D2939",
       transition: "0.2s",
       boxShadow: trigger ? "0px 4px 8px 0px rgba(0, 0, 0, 0.08)" : "none",
@@ -62,10 +61,18 @@ function Header(props) {
 
   const pathname = usePathname();
 
+  const handleContactUsClick = (event) => {
+    event.preventDefault();
+    const footerElement = document.getElementById("footer");
+    if (footerElement) {
+      footerElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <ScrollTrigger {...props}>
       <AppBar position="sticky">
-        <Container maxWidth="xl">
+        <Container sx={{ maxWidth: "1400px !important" }}>
           <Toolbar disableGutters>
             <Link
               href="/"
@@ -115,22 +122,41 @@ function Header(props) {
             >
               {pages.map((page) => (
                 <Fragment key={page.label + "key"}>
-                  <Link
-                    href={page.href}
-                    fontSize={16}
-                    color="#FFF"
-                    sx={{
-                      px: { xs: 2.5, xl: 1.7 },
-                      py: 2,
-                      display: "block",
-                      lineHeight: 1.11,
-                    }}
-                    underline="none"
-                    component={NextLink}
-                  >
-                    {page.label}
-                  </Link>
-                  <Divider orientation="vertical" variant="middle" flexItem />
+                  {page?.label === "Contact Us" ? (
+                    <Link
+                      onClick={handleContactUsClick}
+                      href={page.href}
+                      fontSize={16}
+                      color="#FFF"
+                      sx={{
+                        px: { xs: 2.5, xl: 1.7 },
+                        py: 2,
+                        display: "block",
+                        lineHeight: 1.11,
+                      }}
+                      underline="none"
+                      component={NextLink}
+                    >
+                      {page.label}
+                    </Link>
+                  ) : (
+                    <Link
+                      href={page.href}
+                      fontSize={16}
+                      color="#FFF"
+                      sx={{
+                        px: { xs: 2.5, xl: 1.7 },
+                        py: 2,
+                        display: "block",
+                        lineHeight: 1.11,
+                      }}
+                      underline="none"
+                      component={NextLink}
+                    >
+                      {page.label}
+                    </Link>
+                  )}
+                  {/* <Divider orientation="vertical" variant="middle" flexItem /> */}
                 </Fragment>
               ))}
             </Box>
@@ -167,15 +193,16 @@ function Header(props) {
                 open={Boolean(anchorElNav)}
                 onClose={handleCloseNavMenu}
                 sx={{
-                  position: "fixed",
+                  // position: "fixed",
                   top: 40,
                   left: 0,
-                  right: 10,
+                  right: 0,
                   display: { xs: "block", lg: "none" },
                 }}
                 PaperProps={{
                   style: {
                     width: "100%",
+                    backgroundColor: "white",
                     maxWidth: "100%",
                   },
                 }}

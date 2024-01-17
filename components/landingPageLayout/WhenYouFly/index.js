@@ -1,23 +1,21 @@
 import {
   Box,
-  Button,
   Card,
-  CardActions,
   CardContent,
   Container,
   Divider,
   Grid,
   Typography,
 } from "@mui/material";
-import card from "../../../public/Images/WhenYouFly/card.svg";
-import time from "../../../public/Images/WhenYouFly/plain.svg";
-import plain from "../../../public/Images/WhenYouFly/time.svg";
+import card from "../../../public/user.svg";
+import time from "../../../public/watch.svg";
+import plain from "../../../public/plain.svg";
 
 import Forbes from "../../../public/Images/WhenYouFly/Forbes logo.svg";
 import EditorChoice from "../../../public/Images/WhenYouFly/Editor's Choice.svg";
 import Wired from "../../../public/Images/WhenYouFly/Wired_logo 1.svg";
 import CbsNews from "../../../public/Images/WhenYouFly/CBS_News 1.svg";
-import TravelLeisure from "../../../public/Images/WhenYouFly/Travel+ leisure.svg";
+import TravelLeisure from "../../../public/Images/WhenYouFly/Travelleisure.svg";
 
 const logos = [Forbes, EditorChoice, Wired, CbsNews, TravelLeisure];
 
@@ -107,7 +105,7 @@ export default function WhenYouFly() {
                         minWidth: 275,
                         backgroundColor: "#F5F5F5",
                         borderRadius: "26px",
-                        padding: 1,
+                        padding: { md: 2, xs: 0 },
                         position: "relative",
                         ":before": {
                           backgroundImage: `url(${ele.img.src})`,
@@ -128,7 +126,7 @@ export default function WhenYouFly() {
                           right: 0,
                           zIndex: -1,
                         },
-                        height: { md: "300px", sm: "200px", xs: "200px" },
+                        height: { md: "350px", sm: "200px", xs: "200px" },
                         zIndex: 1,
                       }}
                     >
@@ -136,7 +134,7 @@ export default function WhenYouFly() {
                         <Typography
                           sx={{
                             fontSize: {
-                              md: "34px",
+                              md: "50px",
                               sm: "28px",
                               xs: "26px",
                             },
@@ -154,7 +152,7 @@ export default function WhenYouFly() {
                         <Typography
                           sx={{
                             fontSize: {
-                              md: "30px",
+                              md: "32px",
                               sm: "24px",
                               xs: "22px",
                             },
@@ -171,7 +169,7 @@ export default function WhenYouFly() {
                           variant="body2"
                           sx={{
                             fontSize: {
-                              md: "16px",
+                              md: "20px",
                               sm: "15px",
                               xs: "14px",
                             },
@@ -180,7 +178,7 @@ export default function WhenYouFly() {
                             color: "#8F8F8F",
                             lineHeight: "26px",
                             mt: 2,
-                            maxWidth: "200px",
+                            maxWidth: { md: "320px", xs: "200px" },
                           }}
                         >
                           {ele.description}
@@ -206,7 +204,7 @@ export default function WhenYouFly() {
               {logos?.map((Logo, i) => {
                 return (
                   <Box key={i}>
-                    <Image src={Logo} width={100} height={100} alt="logo"/>
+                    <Image src={Logo} width={100} height={100} alt="logo" />
                   </Box>
                 );
               })}

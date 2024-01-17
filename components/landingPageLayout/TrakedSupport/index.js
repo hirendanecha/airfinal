@@ -104,10 +104,10 @@ function TrakedSupport() {
                 xs: "15px",
               },
               fontStyle: "normal",
-              fontWeight: 500,
+              fontWeight: 600,
               textAlign: "center",
-              lineHeight: { md: "26px", xs: "25px" },
-              maxWidth: "790px",
+              lineHeight: { md: "26px", xs: "22px" },
+              maxWidth: "1100px",
               width: "100%",
               color: "#000",
               mt: 3,
@@ -137,7 +137,7 @@ function TrakedSupport() {
           }}
           breakpoints={{
             0: {
-              slidesPerView: 1,
+              slidesPerView: 1.2,
             },
             450: {
               slidesPerView: 1.5,
@@ -157,8 +157,10 @@ function TrakedSupport() {
                   <Grid item xs={12} md={4}>
                     <Card
                       sx={{
+                        mb: 1,
                         minWidth: 275,
-                        backgroundColor: "#F5F5F5",
+                        backgroundColor: "#F5F5F5 !important",
+                        boxShadow: "unset",
                         borderRadius: "26px",
                         padding: 1,
                         position: "relative",
@@ -189,32 +191,15 @@ function TrakedSupport() {
                         <Typography
                           sx={{
                             fontSize: {
-                              md: "34px",
-                              sm: "28px",
-                              xs: "26px",
-                            },
-                            fontStyle: "normal",
-                            fontWeight: 600,
-                            color: "#000",
-                            lineHeight: "30px",
-                            mt: 1,
-                          }}
-                          color="text.secondary"
-                          gutterBottom
-                        >
-                          {review.count}
-                        </Typography>
-                        <Typography
-                          sx={{
-                            fontSize: {
-                              md: "30px",
+                              md: "32px",
                               sm: "24px",
                               xs: "22px",
                             },
                             fontStyle: "normal",
                             fontWeight: 600,
                             color: "#000",
-                            lineHeight: "30px",
+                            width: { md: "250px", xs: "230px" },
+                            lineHeight: "40px",
                           }}
                           color="text.secondary"
                         >
@@ -224,7 +209,7 @@ function TrakedSupport() {
                           variant="body2"
                           sx={{
                             fontSize: {
-                              md: "16px",
+                              md: "18px",
                               sm: "15px",
                               xs: "14px",
                             },
@@ -232,8 +217,8 @@ function TrakedSupport() {
                             fontWeight: 500,
                             color: "#8F8F8F",
                             lineHeight: "26px",
-                            mt: 2,
-                            maxWidth: "200px",
+                            mt: 4,
+                            maxWidth: "260px",
                           }}
                         >
                           {review.description}

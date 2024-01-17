@@ -120,7 +120,8 @@ function ReviewSlider() {
         }}
         modules={[Pagination, Navigation]}
         sx={{
-          mt: { xs: 6, sm: 7, lg: 8, xl: 9 },
+          mt: { xs: 1, xl: 1 },
+          mb: { md: 8, xs: 3 },
         }}
         // breakpoints={{
         //   768: { slidesPerView: 1 },

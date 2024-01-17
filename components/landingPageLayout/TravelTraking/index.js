@@ -26,7 +26,7 @@ export default function TravelTraking() {
               lineHeight: { md: "52px", xs: "40px" },
               color: "#8F8F8F",
               textAlign: "center",
-              mt: 4,
+              mt: { md: 5, xs: 4 },
             }}
           >
             Nothing flies quite like App in the Air
@@ -44,7 +44,7 @@ export default function TravelTraking() {
               color: "#FFF",
               textAlign: "center",
               maxWidth: "800px",
-              mt: 2,
+              mt: { md: 3, xs: 2 },
             }}
           >
             Pilot-grade travel tracking at every phase of the airport journey &
@@ -61,10 +61,10 @@ export default function TravelTraking() {
               fontWeight: 500,
               textAlign: "center",
               lineHeight: { md: "26px", xs: "25px" },
-              maxWidth: "790px",
+              maxWidth: "900px",
               width: "100%",
               color: "#FFF",
-              mt: 3,
+              mt: { md: 4, xs: 3 },
             }}
           >
             From booking, packing, check-in, boarding, to the hotel and back –
