@@ -1,14 +1,14 @@
 import React from "react";
-import Mobile1 from "../../../public/Images/SaveTime/Mobile1.svg";
-import Mobile2 from "../../../public/Images/SaveTime/Mobile2.svg";
-import Mobile3 from "../../../public/Images/SaveTime/Mobile3.svg";
-import Mobile4 from "../../../public/Images/SaveTime/Mobile4.svg";
-import Mobile5 from "../../../public/Images/SaveTime/Mobile5.svg";
-import Pic1 from "../../../public/Images/SaveTime/Pic1.svg";
-import Pic2 from "../../../public/Images/SaveTime/Pic2.svg";
-import Pic3 from "../../../public/Images/SaveTime/Pic3.svg";
-import Pic4 from "../../../public/Images/SaveTime/Pic4.svg";
-import Pic5 from "../../../public/Images/SaveTime/Pic5.svg";
+import Mobile1 from "../../../public/Images/SaveTime/Mobile1.png";
+import Mobile2 from "../../../public/Images/SaveTime/Mobile2.png";
+import Mobile3 from "../../../public/Images/SaveTime/Mobile3.png";
+import Mobile4 from "../../../public/Images/SaveTime/Mobile4.png";
+import Mobile5 from "../../../public/Images/SaveTime/Mobile5.png";
+import Pic1 from "../../../public/Images/SaveTime/Pic1.png";
+import Pic2 from "../../../public/Images/SaveTime/Pic2.png";
+import Pic3 from "../../../public/Images/SaveTime/Pic3.png";
+import Pic4 from "../../../public/Images/SaveTime/Pic4.png";
+import Pic5 from "../../../public/Images/SaveTime/Pic5.png";
 import { Box, Grid, Typography, styled } from "@mui/material";
 import Image from "next/image";
 
@@ -16,7 +16,6 @@ export default function MobileMap() {
   const Img = styled(Image)(({ theme }) => ({
     width: "496px",
     height: "438px",
-    maxWidth: "100%",
     [theme.breakpoints.down("sm")]: {
       width: "328px",
       height: "180px",

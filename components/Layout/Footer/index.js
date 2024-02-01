@@ -67,7 +67,7 @@ function Footer() {
       id="footer"
     >
       <Container maxWidth={false} sx={{ maxWidth: "1500px" }}>
-        <Grid container direction="row" spacing={4} py={6} mt={0}>
+        <Grid container direction="row" spacing={4} py={10} mt={0}>
           <Grid
             item
             md={4}
@@ -284,7 +284,7 @@ function Footer() {
               gap={1.5}
               sx={{ margin: { xs: "auto", sm: "unset" } }}
             >
-              <Stack direction="row" spacing={{ md: 2, xs: 3 }}>
+              <Stack direction="row" spacing={{ md: 5, xs: 3 }}>
                 {socials.map((social, i) => {
                   return (
                     <Link
@@ -321,6 +321,7 @@ function Footer() {
                 display: { md: "block", xs: "none" },
                 textAlign: "start",
                 fontSize: 14,
+                marginTop: "40px",
                 color: "#8F8F8F",
               }}
             >
@@ -340,7 +341,6 @@ function Footer() {
                 display: "flex",
                 gap: 2,
                 maxWidth: "100%",
-                pb: { md: 5, xs: 2 },
                 alignItems: "end",
               }}
             >
@@ -379,6 +379,7 @@ function Footer() {
                 fontSize: 14,
                 textAlign: "center",
                 width: "100%",
+                pt: { md: 0, xs: 3 },
                 color: "#8F8F8F",
               }}
             >

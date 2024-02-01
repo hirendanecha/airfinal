@@ -29,8 +29,6 @@ const pages = [
   { label: "Contact Us", href: "#footer" },
 ];
 
-// const settings = ["Profile", "Account", "Dashboard", "Logout"];
-
 function ScrollTrigger({ children }) {
   const trigger = useScrollTrigger({
     disableHysteresis: true,
@@ -39,8 +37,9 @@ function ScrollTrigger({ children }) {
 
   return cloneElement(children, {
     sx: {
-      //   py: { xs: 1.5, sm: 2 },
-      backgroundColor: trigger ? "transparent" : "transparent",
+      backgroundColor: trigger
+        ? "rgba(36, 36, 36, 0.9)"
+        : "rgba(36, 36, 36, 0)",
       color: "#1D2939",
       transition: "0.2s",
       boxShadow: trigger ? "0px 4px 8px 0px rgba(0, 0, 0, 0.08)" : "none",
@@ -105,7 +104,6 @@ function Header(props) {
                 alignItems: "center",
                 justifyContent: "end",
                 "& hr": {
-                  // mx: 3.75,
                   height: "20px",
                   marginTop: "auto",
                   marginBottom: "auto",
@@ -156,7 +154,6 @@ function Header(props) {
                       {page.label}
                     </Link>
                   )}
-                  {/* <Divider orientation="vertical" variant="middle" flexItem /> */}
                 </Fragment>
               ))}
             </Box>
@@ -193,7 +190,6 @@ function Header(props) {
                 open={Boolean(anchorElNav)}
                 onClose={handleCloseNavMenu}
                 sx={{
-                  // position: "fixed",
                   top: 40,
                   left: 0,
                   right: 0,

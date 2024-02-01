@@ -15,7 +15,6 @@ export default function useWindowDimensions() {
 
     window.addEventListener("resize", handleResize);
     handleResize();
-    // Cleanup function
     return () => {
       window.removeEventListener("resize", handleResize);
       clearTimeout(timeoutId);

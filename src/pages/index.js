@@ -1,11 +1,11 @@
 import Head from "next/head";
-import TakeControl from "../../components/landingPageLayout/TakeControl";
-import WhenYouFly from "../../components/landingPageLayout/WhenYouFly";
-import TravelTraking from "../../components/landingPageLayout/TravelTraking";
-import SaveTime from "../../components/landingPageLayout/SaveTime";
-import HistoryRace from "../../components/landingPageLayout/HistoryRace";
-import TrakedSupport from "../../components/landingPageLayout/TrakedSupport";
-import JoinSection from "../../components/landingPageLayout/JoinSection";
+import TakeControl from "../../components/landingPageLayout/TakeControlSection";
+import WhenYouFly from "../../components/landingPageLayout/GettheAwardSection";
+import TravelTraking from "../../components/landingPageLayout/PilotGradeSection";
+import SaveTime from "../../components/landingPageLayout/FlyLikeAProSection";
+import HistoryRace from "../../components/landingPageLayout/TrackYourFlightSection";
+import TrakedSupport from "../../components/landingPageLayout/TripTrackedSupportedSection";
+import JoinSection from "../../components/landingPageLayout/WelcomeAboardSection";
 import Reviews from "../../components/Common/Reviews";
 
 export default function Home() {

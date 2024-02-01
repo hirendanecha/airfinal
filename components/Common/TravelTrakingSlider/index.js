@@ -1,8 +1,8 @@
-import WeGoing from "../../../public/Images/TravelTraking/Pic (1).svg";
-import Baggage from "../../../public/Images/TravelTraking/Pic (2).svg";
-import Destination from "../../../public/Images/TravelTraking/Pic (3).svg";
-import CarRent from "../../../public/Images/TravelTraking/Pic (4).svg";
-import Location from "../../../public/Images/TravelTraking/Pic (5).svg";
+import WeGoing from "../../../public/Images/TravelTraking/Pic (11).png";
+import Baggage from "../../../public/Images/TravelTraking/Pic (12).png";
+import Destination from "../../../public/Images/TravelTraking/Pic (13).png";
+import CarRent from "../../../public/Images/TravelTraking/Pic (14).png";
+import Location from "../../../public/Images/TravelTraking/Pic (15).png";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -11,16 +11,12 @@ import { Pagination } from "swiper/modules";
 import * as ReactDOMServer from "react-dom/server";
 
 const Img = styled(Image)(({ theme }) => ({
-  width: "729px !important",
-  height: "529px ",
+  width: "752px !important",
+  height: "529px !important",
   maxWidth: "100%",
-  [theme.breakpoints.down("md")]: {
-    width: "auto !important",
-    height: "300px",
-  },
   [theme.breakpoints.down("sm")]: {
     width: "auto !important",
-    height: "180px",
+    height: "300px !important",
   },
 }));
 const data = [
@@ -86,11 +82,33 @@ const data = [
   },
 ];
 
-import React from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { Box, Grid, Typography, styled } from "@mui/material";
 import { Autoplay, Navigation } from "swiper/modules";
 
+const useMediaQuery = (width) => {
+  const [targetReached, setTargetReached] = useState(false);
+
+  const updateTarget = useCallback((e) => {
+    if (e.matches) setTargetReached(true);
+    else setTargetReached(false);
+  }, []);
+
+  useEffect(() => {
+    const media = window.matchMedia(`(max-width: ${width}px)`);
+    media.addEventListener("change", updateTarget);
+
+    if (media.matches) setTargetReached(true);
+
+    return () => media.removeEventListener("change", updateTarget);
+  }, [width, updateTarget]);
+
+  return targetReached;
+};
+
 export default function TravelTrakingSlider() {
+  const isMobile = useMediaQuery(900);
+
   return (
     <>
       <Box
@@ -108,10 +126,10 @@ export default function TravelTrakingSlider() {
           },
           clickable: true,
         }}
-        // autoplay={{
-        //   delay: 3000,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
         sx={{
           overflow: "visible !important",
           overflowX: "clip !important",
@@ -178,7 +196,7 @@ export default function TravelTrakingSlider() {
             },
             "& .swiper-pagination-bullet": {
               flexShrink: 2,
-              minWidth: "120px", // Set a minimum width for each option
+              minWidth: "120px",
             },
           },
         }}
@@ -191,7 +209,7 @@ export default function TravelTrakingSlider() {
               style={{
                 backgroundColor: "#333333",
                 borderRadius: "15px",
-                maxHeight: "450px",
+                maxHeight: isMobile ? "750px" : "450px",
               }}
             >
               <Box>
@@ -277,8 +295,8 @@ export default function TravelTrakingSlider() {
                       );
                     })}
                   </Grid>
-                  <Grid item xs={12} md={6} mt={-2}>
-                    <Img src={ele.img} />
+                  <Grid item xs={12} md={6} mt={-3}>
+                    <Img src={ele.img} width={900} alt="img" />
                   </Grid>
                 </Grid>
               </Box>
