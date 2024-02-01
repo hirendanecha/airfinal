@@ -284,7 +284,7 @@ function Footer() {
               gap={1.5}
               sx={{ margin: { xs: "auto", sm: "unset" } }}
             >
-              <Stack direction="row" spacing={{ md: 5, xs: 3 }}>
+              <Stack direction="row" spacing={{ md: 3, xs: 3 }}>
                 {socials.map((social, i) => {
                   return (
                     <Link

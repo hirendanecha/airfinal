@@ -46,7 +46,7 @@ export default function UserCard({
             value={30}
             sx={{ marginTop: "-20%" }}
           >
-            <Image src={user} height={89} width={89} alt="user"/>
+            <Image src={user} height={89} width={89} alt="user" />
           </CircularProgress>
           <CardContent>
             <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
@@ -76,22 +76,64 @@ export default function UserCard({
             }}
           >
             <Box sx={{ color: "#000" }} variant="soft" size="sm">
-              <Typography sx={{ color: "#000", fontWeight: 700 }}>
+              <Typography
+                sx={{
+                  color: "#000",
+                  fontWeight: 700,
+                  fontSize: { md: "18px", xs: "17px" },
+                }}
+              >
                 {miles}
               </Typography>
-              <Typography sx={{ color: "#8F8F8F" }}>miles</Typography>
+              <Typography
+                sx={{
+                  color: "#8F8F8F",
+                  fontWeight: 500,
+                  fontSize: { md: "19px", xs: "18px" },
+                }}
+              >
+                miles
+              </Typography>
             </Box>
             <Box sx={{ color: "#000" }} variant="soft" size="sm">
-              <Typography sx={{ color: "#000", fontWeight: 700 }}>
+              <Typography
+                sx={{
+                  color: "#000",
+                  fontWeight: 700,
+                  fontSize: { md: "18px", xs: "17px" },
+                }}
+              >
                 {hours}
               </Typography>
-              <Typography sx={{ color: "#8F8F8F" }}>hours</Typography>
+              <Typography
+                sx={{
+                  color: "#8F8F8F",
+                  fontWeight: 500,
+                  fontSize: { md: "19px", xs: "18px" },
+                }}
+              >
+                hours
+              </Typography>
             </Box>
             <Box sx={{ color: "#000" }} variant="soft" size="sm">
-              <Typography sx={{ color: "#000", fontWeight: 700 }}>
+              <Typography
+                sx={{
+                  color: "#000",
+                  fontWeight: 700,
+                  fontSize: { md: "18px", xs: "17px" },
+                }}
+              >
                 {flight}
               </Typography>
-              <Typography sx={{ color: "#8F8F8F" }}>flights</Typography>
+              <Typography
+                sx={{
+                  color: "#8F8F8F",
+                  fontWeight: 500,
+                  fontSize: { md: "19px", xs: "18px" },
+                }}
+              >
+                flights
+              </Typography>
             </Box>
           </Box>
         </CardActions>
